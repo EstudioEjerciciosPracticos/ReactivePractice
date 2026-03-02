@@ -10,4 +10,9 @@ public class TechnicalException extends RuntimeException{
         super(technicalErrorMessage.getMessage());
         this.technicalErrorMessage = technicalErrorMessage;
     }
+
+    public TechnicalException(Throwable cause, TechnicalErrorMessage technicalErrorMessage) {
+        super(technicalErrorMessage.getMessage(), cause);
+        this.technicalErrorMessage = technicalErrorMessage;
+    }
 }
